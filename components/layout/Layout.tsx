@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import React from 'react'
-import { CenterPanel } from './CenterPanel-sidecar'
-import { ColumnTwo } from './ColumnTwo-sidecar'
 import css from './Layout.module.scss'
 
 export const Layout = (props: { children: React.ReactNode; title: string }) => {
@@ -18,19 +16,13 @@ export const Layout = (props: { children: React.ReactNode; title: string }) => {
       </Head>
 
       <div>
-        <CenterPanel>
-          <ColumnTwo>
-            <div>StevieBushman.com</div>
-            <div>stevie@steviebushman.com</div>
-          </ColumnTwo>
+        <div>StevieBushman.com</div>
+        <div>stevie@steviebushman.com</div>
 
-          {props.children}
+        {props.children}
 
-          <ColumnTwo>
-            <div>&copy; Stevie Bushman</div>
-            <div>stevie@steviebushman.com</div>
-          </ColumnTwo>
-        </CenterPanel>
+        <div>&copy; Stevie Bushman</div>
+        <div>stevie@steviebushman.com</div>
       </div>
     </div>
   )
